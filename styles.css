@@ -182,8 +182,10 @@ button { font: inherit; color: inherit; }
   margin: 6vh 0 4vh -0.04em;
   will-change: transform;
 }
-.line { display: block; overflow: hidden; padding-bottom: .14em; margin-bottom: -.1em; }
-.hero__name .line { padding-right: .06em; }
+/* Mask for rising text. Padding gives tightly-spaced glyphs room so their edges aren't clipped;
+   the matching negative margin keeps the layout where it was. */
+.line { display: block; overflow: hidden; padding: 0 .1em .14em .05em; margin: 0 -.1em -.1em -.05em; }
+.hero__name .line { padding: 0 .06em .14em 0; margin: 0 0 -.1em 0; }
 .line--right { align-self: flex-end; }
 .hl { position: relative; display: inline-block; color: var(--paper); }
 .hl__bg {
