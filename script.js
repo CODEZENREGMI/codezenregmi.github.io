@@ -171,6 +171,8 @@
     firstVisit = !sessionStorage.getItem('cr-intro');
     sessionStorage.setItem('cr-intro', '1');
   } catch (e) { /* storage blocked: show the intro */ }
+  // Search engines and link previews get the page straight away
+  if (/bot|crawl|spider|slurp|facebookexternalhit|embedly|preview/i.test(navigator.userAgent)) firstVisit = false;
 
   const fxCanvas = $('#fx');
   if (firstVisit && window.CRIntro) {
