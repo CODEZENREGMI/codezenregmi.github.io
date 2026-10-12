@@ -106,21 +106,24 @@ button { font: inherit; color: inherit; }
   .js .cursor {
     display: grid; place-items: center;
     position: fixed; left: 0; top: 0; z-index: 120;
-    width: 10px; height: 10px; margin: -5px 0 0 -5px;
+    /* No dot by default; the circle only grows in over elements with a label (Play, Visit, ...) */
+    width: 0; height: 0; margin: 0;
     border-radius: 50%;
-    background: var(--paper);
-    mix-blend-mode: difference;
+    background: var(--accent);
     pointer-events: none;
     transition: width .45s var(--ease), height .45s var(--ease), margin .45s var(--ease), background-color .3s;
   }
   .cursor.is-label {
     width: 88px; height: 88px; margin: -44px 0 0 -44px;
-    background: var(--accent); mix-blend-mode: normal;
   }
   .cursor__label { font-size: 13px; font-weight: 500; color: #fff; opacity: 0; transform: scale(.6); transition: opacity .3s, transform .45s var(--ease); white-space: nowrap; }
   .cursor.is-label .cursor__label { opacity: 1; transform: none; }
   .cursor.is-hidden { width: 0; height: 0; margin: 0; }
 }
+
+/* ---------- Cursor trail ---------- */
+.trail { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 110; pointer-events: none; overflow: visible; transition: opacity .2s ease; }
+.trail.is-off { opacity: 0; }
 
 /* ---------- Nav ---------- */
 .nav {
