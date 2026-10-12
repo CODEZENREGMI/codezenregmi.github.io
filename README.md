@@ -2,6 +2,8 @@
 
 Personal portfolio of **Codezen Regmi** (Pranjal Regmi), a 15-year-old entrepreneur from Kathmandu, Nepal, and founder of Creovel and Meme Survival.
 
+**Live:** https://codezenregmi.github.io
+
 ## What's inside
 
 - A cinematic intro: the portrait rises out of the dark with an ember aura, then breaks apart into black bats that fly across the page
@@ -21,4 +23,4 @@ Then open http://localhost:5173.
 
 ## Deploy
 
-Static site, so it works as-is on Vercel, Netlify or GitHub Pages.
+Hosted on GitHub Pages from the `main` branch. Every push to `main` updates the live site.
